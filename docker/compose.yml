@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   app:
-    image: sloopstash/app:v1
+    image: bharath/app:v1
     command: "/usr/bin/supervisord -c /etc/supervisord.conf"
     ports:
       - "8080:80"
@@ -18,7 +18,7 @@ services:
       common:
         ipv4_address: 100.1.1.10
   redis:
-    image: sloopstash/redis:v1
+    image: bharath/redis:v1
     command: "/usr/bin/supervisord -c /etc/supervisord.conf"
     volumes:
       - redis-data:/opt/redis/data
